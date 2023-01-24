@@ -24,6 +24,7 @@ def apiOverview(request):
         'List job by ID': '/listjob/<id>/',
         'Create job': '/createjob/',
         'Update job': '/updatejob/<id>/',
+        'Delete job': '/deletejob/<id>/',
     }
     return Response(api_urls)
 
@@ -51,8 +52,12 @@ def createJob(request):
     serializer = JobSerializer(data=request.data)
 
     if serializer.is_valid(raise_exception=True):
-        print("Valid data!")
-        serializer.save(user=request.user)
+        print(request.user)
+        if request.user:
+            print("Valid data!")
+            serializer.save(user=request.user)
+        else:
+            print("hello")
 
     return Response(serializer.data)
 
