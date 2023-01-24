@@ -154,6 +154,13 @@ create table jobsExtractor_job
 );
 ```
 
+## Start the server
+Simply run the following commends after ```cd``` to the project directory
+``` commandline
+python manage.py runserver
+
+```
+
 ## Method details
 
 There are four main functions provided.
