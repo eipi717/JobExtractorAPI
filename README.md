@@ -1,7 +1,7 @@
 # JobExtractorAPI
 
 ## Introduction
-#### This is An API with CRUD operations. User can insert jobs to the connected database or insert by POST method.
+#### This is An API with CRUD operations implemented by Python Django. User can insert jobs to the connected database or insert by POST method.
 
 ## Database Structure
 ####  MySQL 8.0.30 is used in this project.
